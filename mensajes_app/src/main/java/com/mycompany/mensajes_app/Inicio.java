@@ -22,9 +22,9 @@ public class Inicio {
             System.err.println(" Aplicacion de Mensajes");
             System.err.println(" 1. crear mensaje");
             System.err.println(" 2. listar mensajes");          
-            System.err.println(" 3. editar mensajes");
-            System.err.println(" 4. eliminar mensajes");
-            System.err.println(" 5. eliminar");
+            System.err.println(" 3. Eliminar mensajes");
+            System.err.println(" 4. editar mensajes");
+            System.err.println(" 5. salir");
             //guardado de opcion
             
             opcion = sc.nextInt();

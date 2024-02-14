@@ -30,6 +30,27 @@ public class mensajesService {
     public static void listarMensajes(){
         MensajesDAO.leerMensajesDB();
     }
-    public static void borrarMensaje(){}
-    public static void editarMensaje(){}
+    public static void borrarMensaje(){
+    Scanner sc = new Scanner(System.in);
+        System.out.println("Indica el id del mensaje a borrar");
+        int id_mensaje = sc.nextInt();
+        MensajesDAO.borrarMensajeDB(id_mensaje);
+        
+    }
+    public static void editarMensaje(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Escribe el nuevo mensaje");
+        String mensje = sc.nextLine();
+        System.out.println("Indica el id del mensaje a Actualizar: ");
+        int id_mensaje = sc.nextInt();
+        
+        
+        Mensajes registro = new Mensajes();
+        registro.setId_mensaje(id_mensaje);
+        registro.setMensaje(mensje);
+        
+        MensajesDAO.actualizarMensajeDB(registro);
+       
+    
+    }
 }
